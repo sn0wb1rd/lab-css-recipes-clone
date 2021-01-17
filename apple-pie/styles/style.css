@@ -1,81 +1,83 @@
 
 body {
-    font-family: sans-serif;
+    font-family: 'Geneva', sans-serif;
     margin:0;
-    padding: 0;
-    width: 800px;
-    line-height: 3em;
-    font-weight: 300;
-    white-space: normal;
-    
+    color: #4e4e4e;
+    padding-bottom: 4em;
 }
+
+
 
 header {
-    display: flex;
-    height: 500px;
-    font-weight:bold;
-    background: no-repeat center/100% url('../images/apple_pie.jpg');
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
     /*https://css-tricks.com/the-backgound-clip-property-and-use-cases/*/
-
-    }
-
-
-
-.Title {
-    font-size: 4em;
+    background: no-repeat center url('../images/apple_pie.jpg'); 
+    background-size: cover; 
     color: white;
-    font-weight: lighter;
-    width: 800px;
-    text-align:center ;
-    padding-top: 6rem;
-
+    font-size: 300%;
+    font-weight: normal;
+    text-align: center;
+    padding: 250px;
 }
-
-h2 {
-    background-color: brown;
-    font-size: 2em;
-}
-
-/* header {
-    display: flex;
-    justify-content: center;
-}
-
-.applePieImg {
-    width: 800px;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
 
 .introText {
-    background-color: purple;
+    margin-top: 2.5em;
     font-size: 1.5em;
 }
 
-h2 {
-    background-color: chocolate;
-    font-size: 2em;
+.content-container {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.Content {
-    background-color: chocolate;
-    font-size: 1.5em;
-} */
+
+#ingredients h2,
+#directions h2 {
+    padding-top: 1em;
+}
+
+
+#recipeImg {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    height: 4em;
+}
+
+#cookingInfoImg  {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    height: 5em;
+}
 
 ul {
-    background-color:chartreuse;
     list-style-type: none;
+    font-size: 1.2em;
 }
-
-
 
 ul > li:before {
     content: "–"; /* en dash */
     position: absolute;
     margin-left: -1.1em; 
-  }
+}
 
+ol {
+    list-style: none;
+    padding-left: 15px;
+    font-size: 1.2em;
+    counter-reset: item; /* so the number starts at 1 agian*/
+}
+
+ol li:before {
+    content: counters(item, ")") ") ";
+    counter-increment: item;
+    padding-right: 5px;
+  }
 
